@@ -1,0 +1,3 @@
+default_version = 1.0
+comment = 'An extension that introduces a new data type, EEG, which supports EDF EEG data for analysis.'
+relocatable = true

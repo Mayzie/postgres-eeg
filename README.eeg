@@ -1,0 +1,37 @@
+TYPE signal
+Description: Data structure that is used to store signal data in such a way
+  that it is able to then interact with the various signal analysis
+  functions available.
+
+FUNCTION to_signal
+Description: Converts a numerical array to the signal data structure. Accepts
+  one additional argument, and that is the duration (in seconds) the signal 
+  data is over.
+
+FUNCTION spectral_power
+Description: Returns the spectral power (as a DOUBLE/FLOAT8) of a given signal
+  between a lower frequency range, and a higher frequency range.
+
+FUNCTION alpha
+Description: Returns the spectral power (as a DOUBLE/FLOAT8) of a given signal
+  between the frequency range 7.5 Hz - 13 Hz.
+
+FUNCTION beta
+Description: Returns the spectral power (as a DOUBLE/FLOAT8) of a given signal
+  between the frequency range 13 Hz - 30 Hz
+
+FUNCTION delta
+Description: Returns the spectral power (as a DOUBLE/FLOAT8) of a given signal
+  between the frequency range 1 Hz - 4 Hz
+
+FUNCTION theta
+Description: Returns the spectral power (as a DOUBLE/FLOAT8) of a given signal
+  between the frequency range 4 Hz - 7.5 Hz
+
+FUNCTION get_signal
+Description: Given the ID of the EEG scan, the epoch, and channel, returns a
+  a result in the appropriate signal data structure.
+
+FUNCTION signal_in_range
+Description: Finds all frequencies that within a given frequency range (min_freq,
+  max_freq) match the spectral power range defined by power_min and power_max.
